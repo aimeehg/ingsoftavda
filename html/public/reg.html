@@ -1,0 +1,70 @@
+<!DOCTYPE>
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>registro</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/parsley.css">
+        <link rel="stylesheet" type="text/css" href="css/reg.css">
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/parsley.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        
+
+    </head>
+    <body>
+      <!-- script para validacion -->
+        <script src="js/validacion.js"></script>
+      <!-- script para el registro -->
+        <script src="js/registro_alumno.js"></script>
+        <script src="views/app/reg.js"></script>
+      <!-- alert para error de formulario -->
+    <div class="alert alert-danger hidden" id="error_valid">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      <p id="errmsg_valid">Corrige los errores en el formulario</p>
+    </div>
+      <!-- formulario -->
+<form id="demo-form" method="POST">
+     <fieldset>
+  <label for="matricula">Matricula* :</label>
+  <input id ="matricula" type="number" class="form-control" name="matricula" data-parsley-validar-tam="9" required="">
+
+  <label for="nombre">Nombre* :</label>
+  <input id="nombre" type="text" class="form-control" name="nombre" required="">
+
+  <label for="paterno">Apellido paterno* :</label>
+  <input id="paterno" type="text" class="form-control" name="paterno" required="">
+
+    <label for="materno">Apellido materno* :</label>
+  <input id="materno" type="text" class="form-control" name="materno" required="">
+
+  <label for="email">Email * :</label>
+  <input id="email" type="email" class="form-control" name="email" data-parsley-trigger="change" required="">
+
+  <label for="password">Password * :</label>
+  <input id="password" type="password" data-parsley-validar-pass-tam="7" data-parsley-validar-pass-a="/^A/g"  class="form-control" name="password" data-parsley-trigger="change" required="">
+
+  <label for="celular">Celular / Telefono con lada* :</label>
+  <input id ="celular" type="number" class="form-control" name="celular" data-parsley-validar-tam="10" required="">
+
+  <label for="prog_edu">Programa educativo* :</label>
+  <input id="prog_edu" type="text" class="form-control" name="prog_edu" required="">
+ <!-- coordinador ejemplo <label for="password2">Password2 * :</label>
+  <input id="password2" type="password" data-parsley-validar-pass-tam="6" data-parsley-validar-pass="/^C/g"  data-parsley-validar-pass-mes="/\d{2}/g"   data-parsley-validar-pass-U3="/\D{3}$/g" class="form-control" name="password" data-parsley-trigger="change" required="">
+
+-->
+  <br>
+  <input type="submit" class="btn btn-default" value="validate">
+  </fieldset>
+</form>
+
+    </body>
+</html>

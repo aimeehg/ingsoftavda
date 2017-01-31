@@ -1,6 +1,7 @@
 <head>
   <!-- Site made with Mobirise Website Builder v3.11.1, https://mobirise.com -->
   <meta charset="UTF-8">
+  <base href="<?php APP_URL ?>">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Mobirise v3.11.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,6 +19,8 @@
   <link rel="stylesheet" href="assets/dropdown/css/style.css">
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+
+  <script src="views/app/js/generales.js"></script>
   <title><?php echo APP_TITLE?></title>
   
   
